@@ -7,6 +7,15 @@ class EmployeeAttendance{
     int is_preset = 1;
 }
 
+class DealyWage{
+
+    int empperhrsrate = 20;
+    int is_fulldayhrs = 8;
+
+    int totalwage;
+
+}
+
 public class EmployeeWage {
 
     public static void main(String[] args) {
@@ -19,5 +28,13 @@ public class EmployeeWage {
         }else {
             System.out.println("Employee is not present");
         }
+
+
+        DealyWage dl = new DealyWage();
+
+        dl.totalwage = dl.empperhrsrate * dl.is_fulldayhrs;
+        System.out.println("Total wage is :" + dl.totalwage);
+
+
     }
 }
